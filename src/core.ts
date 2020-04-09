@@ -1,6 +1,6 @@
 import { safeParse } from './utils'
 
-interface Store {
+export interface JSONStore {
   set: (key: string, payload: any) => void,
   get: (key: string) => any,
   remove: (key: string) => void,
@@ -9,7 +9,7 @@ interface Store {
   readonly length: number,
 }
 
-export function createStore (store: Storage): Store {
+export function createJSONStore (store: Storage): JSONStore {
   const nativeStore = store
 
   return {

@@ -1,3 +1,5 @@
-import { createStore } from './core'
+import { createJSONStore } from './core'
 
-createStore(window.localStorage)
+export default createJSONStore(
+  typeof localStorage === 'undefined' ? window.localStorage : localStorage
+)

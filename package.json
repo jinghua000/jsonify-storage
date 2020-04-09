@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --extension ts --require ts-node/register",
+    "test": "mocha --extension ts --require ts-node/register --reuqire test/setup.ts",
     "clean": "rm -rf dist/ types/"
   },
   "repository": {
@@ -21,6 +21,7 @@
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.11.0",
     "assert": "^2.0.0",
+    "dom-storage": "^2.1.0",
     "mocha": "^7.1.1",
     "ts-node": "^8.8.2",
     "typescript": "^3.8.3"
