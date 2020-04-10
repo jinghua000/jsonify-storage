@@ -1,5 +1,6 @@
 import { eq, equals } from './shared'
 import local from '../src/local'
+import { set, get, remove, clear, key } from '../src/local'
 import session from '../src/session'
 
 describe('test storage', () => {
@@ -53,6 +54,78 @@ describe('test storage', () => {
     equals(local.get('bar'), { a: 123 })
 
     localStorage.clear()
+
+  })
+
+  it('localStorage\'s length should works', () => {
+
+    eq(local.length, 0)
+    local.set('foo', 123)
+    eq(local.length, 1)
+    localStorage.setItem('bar', '234')
+    eq(local.length, 2)
+    local.clear()
+    eq(local.length, 0)
+
+  })
+
+  it('localStorage\'s key should works', () => {
+
+    local.set('foo', 123)
+    local.set('bar', 234)
+    localStorage.setItem('baz', '345')
+    eq(local.key(0), 'foo')
+    eq(local.key(1), 'bar')
+    eq(local.key(2), 'baz')
+
+    local.remove('foo')
+    eq(local.key(0), 'bar')
+    eq(local.key(1), 'baz')
+
+  })
+
+  it('localStorage\'s remove should works', () => {
+
+    local.set('foo', 123)
+    localStorage.setItem('bar', '234')
+
+    eq(local.remove('foo'), void 0)
+    eq(local.get('foo'), null)
+
+    localStorage.removeItem('bar')
+    eq(local.get('bar'), null)
+
+  })
+
+  it('of course clear should works', () => {
+
+    local.set('foo', 123)
+    local.set('bar', 234)
+
+    eq(localStorage.length, 2)
+    local.clear()
+    eq(localStorage.length, 0)
+    eq(local.length, 0)
+
+  })
+
+  it('can works without context', () => {
+
+    set('foo', 123)
+    set('bar', 234)
+
+    eq(get('foo'), 123)
+    eq(local.length, 2)
+    eq(key(0), 'foo')
+    
+    remove('foo')
+
+    eq(key(0), 'bar')
+    eq(local.length, 1)
+
+    clear()
+
+    eq(local.length, 0)
 
   })
 
