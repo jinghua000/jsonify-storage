@@ -2,10 +2,11 @@
   "name": "jsonify-storage",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.ts",
   "scripts": {
     "test": "mocha --extension ts --require ts-node/register --reuqire test/setup.ts",
     "clean": "rm -rf dist/ types/",
+    "build": "yarn clean && rollup -c",
     "cover": "yarn cover:unit && yarn cover:report",
     "cover:unit": "nyc npm test",
     "cover:report": "nyc report --reporter=lcov"
@@ -27,6 +28,9 @@
     "dom-storage": "^2.1.0",
     "mocha": "^7.1.1",
     "nyc": "^15.0.1",
+    "rollup": "^2.4.0",
+    "rollup-plugin-terser": "^5.3.0",
+    "rollup-plugin-typescript2": "^0.27.0",
     "ts-node": "^8.8.2",
     "typescript": "^3.8.3"
   }

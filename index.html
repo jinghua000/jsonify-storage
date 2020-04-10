@@ -1,0 +1,10 @@
+<script src="./dist/jsonify-storage.umd.js"></script>
+<script>
+
+const { local } = jsonifyStorage
+
+local.set('foo', { a: 123 })
+console.log(local.get('foo'))
+console.log(localStorage.getItem('foo'))
+
+</script>

@@ -1,5 +1,5 @@
 import { eq, equals } from './shared'
-import local from '../src/local'
+import { local } from '../src'
 import { set, get, remove, clear, key } from '../src/local'
 import session from '../src/session'
 
