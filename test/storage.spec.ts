@@ -1,6 +1,5 @@
 import { eq, equals } from './shared'
 import { local } from '../src'
-import { set, get, remove, clear, key } from '../src/local'
 import session from '../src/session'
 
 describe('test storage', () => {
@@ -110,6 +109,8 @@ describe('test storage', () => {
   })
 
   it('can works without context', () => {
+
+    const { set, get, remove, clear, key } = local
 
     set('foo', 123)
     set('bar', 234)

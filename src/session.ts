@@ -1,14 +1,6 @@
 import { createJSONStore } from './core'
 
-const store = createJSONStore(
+export default createJSONStore(
   /* istanbul ignore next */
   typeof sessionStorage === 'undefined' ? window.sessionStorage : sessionStorage
 )
-
-export const set = store.set
-export const get = store.get
-export const remove = store.remove
-export const clear = store.clear
-export const key = store.key
-
-export default store

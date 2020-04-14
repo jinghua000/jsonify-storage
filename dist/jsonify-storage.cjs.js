@@ -25,13 +25,13 @@ function createJSONStore(store) {
     };
 }
 
-const store = createJSONStore(
+var local = createJSONStore(
 /* istanbul ignore next */
 typeof localStorage === 'undefined' ? window.localStorage : localStorage);
 
-const store$1 = createJSONStore(
+var session = createJSONStore(
 /* istanbul ignore next */
 typeof sessionStorage === 'undefined' ? window.sessionStorage : sessionStorage);
 
-exports.local = store;
-exports.session = store$1;
+exports.local = local;
+exports.session = session;

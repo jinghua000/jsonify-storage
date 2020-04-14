@@ -1,11 +1,18 @@
+/**
+ * Wrapper of the native `Storage`.
+ *
+ * @public
+ */
 export interface JSONStore {
     /**
      * Set a key-val to `Storage`, but jsonify the value.
      *
      * @example
      *
+     * ```ts
      * local.set('foo', { a: 123 })
      * local.get('foo') // => { a: 123 }
+     * ```
      */
     set: (key: string, payload: any) => void;
     /**
@@ -15,12 +22,14 @@ export interface JSONStore {
      *
      * @example
      *
+     * ```ts
      * local.set('foo', { a: 123 })
      * local.get('foo') // => { a: 123 }
      *
      * localStorage.setItem('bar', '你好')
      * local.get('bar') // => null
      * local.get('baz') // => null
+     * ```
      */
     get: (key: string) => any;
     /**
@@ -28,9 +37,11 @@ export interface JSONStore {
      *
      * @example
      *
+     * ```ts
      * local.set('foo', 123)
      * local.remove('foo')
      * local.get('foo') // => null
+     * ```
      */
     remove: (key: string) => void;
     /**
@@ -38,10 +49,12 @@ export interface JSONStore {
      *
      * @example
      *
+     * ```ts
      * local.set('foo', 123)
      * local.set('bar', 234)
      * local.clear()
      * local.length // => 0
+     * ```
      */
     clear: () => void;
     /**
@@ -49,10 +62,12 @@ export interface JSONStore {
      *
      * @example
      *
+     * ```ts
      * local.set('foo', 123)
      * local.set('bar', 234)
      * local.key(0) // => 'foo'
      * local.key(1) // => 'bar'
+     * ```
      */
     key: (index: number) => string;
     /**
@@ -60,9 +75,11 @@ export interface JSONStore {
      *
      * @example
      *
+     * ```ts
      * local.length // => 0
      * local.set('foo', 123)
      * local.length // => 1
+     * ```
      */
     readonly length: number;
 }

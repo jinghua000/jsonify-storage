@@ -2,11 +2,15 @@
   "name": "jsonify-storage",
   "version": "0.0.1",
   "description": "Just jsonify the payload for local and session storage.",
-  "main": "src/index.ts",
+  "main": "dist/jsonify-storage.cjs.js",
+  "module": "dist/jsonify-storage.esm.js",
+  "types": "types/index.d.ts",
   "scripts": {
     "test": "mocha --extension ts --require ts-node/register --reuqire test/setup.ts",
     "clean": "rm -rf dist/ types/",
-    "build": "yarn clean && rollup -c",
+    "build": "yarn build:src && yarn build:doc",
+    "build:src": "yarn clean && rollup -c",
+    "build:doc": "api-extractor run && api-documenter markdown --input-folder temp/ --output-folder api-docs/",
     "cover": "yarn cover:unit && yarn cover:report",
     "cover:unit": "nyc npm test",
     "cover:report": "nyc report --reporter=lcov"
@@ -33,6 +37,9 @@
   },
   "homepage": "https://github.com/jinghua000/jsonify-storage#readme",
   "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@microsoft/api-documenter": "^7.7.18",
+    "@microsoft/api-extractor": "^7.7.13",
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.11.0",
     "assert": "^2.0.0",
