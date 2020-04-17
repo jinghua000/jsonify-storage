@@ -4,7 +4,7 @@
 
 ## jsonify-storage package
 
-Just jsonify the payload for local and session storage.
+Jsonify the payload for local and session storage.
 
 ## Interfaces
 

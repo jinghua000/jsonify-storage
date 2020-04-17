@@ -8,5 +8,5 @@
 
 |  Package | Description |
 |  --- | --- |
-|  [jsonify-storage](./jsonify-storage.md) | Just jsonify the payload for local and session storage. |
+|  [jsonify-storage](./jsonify-storage.md) | Jsonify the payload for local and session storage. |
 

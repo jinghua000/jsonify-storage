@@ -1,7 +1,7 @@
 {
   "name": "jsonify-storage",
   "version": "0.0.1",
-  "description": "Just jsonify the payload for local and session storage.",
+  "description": "Jsonify the payload for local and session storage.",
   "main": "dist/jsonify-storage.cjs.js",
   "module": "dist/jsonify-storage.esm.js",
   "types": "types/index.d.ts",

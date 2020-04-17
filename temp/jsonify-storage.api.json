@@ -7,7 +7,7 @@
   },
   "kind": "Package",
   "canonicalReference": "jsonify-storage!",
-  "docComment": "/**\n * Just jsonify the payload for local and session storage.\n *\n * @packageDocumentation\n */\n",
+  "docComment": "/**\n * Jsonify the payload for local and session storage.\n *\n * @packageDocumentation\n */\n",
   "name": "jsonify-storage",
   "members": [
     {
