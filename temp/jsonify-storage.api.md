@@ -14,10 +14,10 @@ export interface JSONStore {
     set: (key: string, payload: any) => void;
 }
 
-// @public (undocumented)
+// @public
 export const local: import("./core").JSONStore;
 
-// @public (undocumented)
+// @public
 export const session: import("./core").JSONStore;
 
 

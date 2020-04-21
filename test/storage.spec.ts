@@ -1,6 +1,5 @@
 import { eq, equals } from './shared'
-import { local } from '../src'
-import session from '../src/session'
+import { local, session } from '../src'
 
 describe('test storage', () => {
 

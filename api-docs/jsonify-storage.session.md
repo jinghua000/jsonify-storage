@@ -4,8 +4,10 @@
 
 ## session variable
 
+Wrapper of `sessionStorage`<!-- -->.
+
 <b>Signature:</b>
 
 ```typescript
-_default: import("./core").JSONStore
+session: import("./core").JSONStore
 ```

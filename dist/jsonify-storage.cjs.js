@@ -25,11 +25,19 @@ function createJSONStore(store) {
     };
 }
 
-var local = createJSONStore(
+/**
+ * @public
+ * Wrapper of `localStorage`.
+ */
+const local = createJSONStore(
 /* istanbul ignore next */
 typeof localStorage === 'undefined' ? window.localStorage : localStorage);
 
-var session = createJSONStore(
+/**
+ * @public
+ * Wrapper of `sessionStorage`.
+ */
+const session = createJSONStore(
 /* istanbul ignore next */
 typeof sessionStorage === 'undefined' ? window.sessionStorage : sessionStorage);
 

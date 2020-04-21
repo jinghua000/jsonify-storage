@@ -16,6 +16,6 @@ Jsonify the payload for local and session storage.
 
 |  Variable | Description |
 |  --- | --- |
-|  [local](./jsonify-storage.local.md) |  |
-|  [session](./jsonify-storage.session.md) |  |
+|  [local](./jsonify-storage.local.md) | Wrapper of <code>localStorage</code>. |
+|  [session](./jsonify-storage.session.md) | Wrapper of <code>sessionStorage</code>. |
 

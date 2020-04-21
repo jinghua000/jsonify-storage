@@ -4,8 +4,10 @@
 
 ## local variable
 
+Wrapper of `localStorage`<!-- -->.
+
 <b>Signature:</b>
 
 ```typescript
-_default: import("./core").JSONStore
+local: import("./core").JSONStore
 ```

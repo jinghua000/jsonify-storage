@@ -1,6 +1,12 @@
 import { createJSONStore } from './core'
 
-export default createJSONStore(
+/**
+ * @public
+ * Wrapper of `localStorage`.
+ */
+const local = createJSONStore(
   /* istanbul ignore next */
   typeof localStorage === 'undefined' ? window.localStorage : localStorage
 )
+
+export default local

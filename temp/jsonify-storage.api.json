@@ -184,11 +184,11 @@
         {
           "kind": "Variable",
           "canonicalReference": "jsonify-storage!local:var",
-          "docComment": "",
+          "docComment": "/**\n * Wrapper of `localStorage`.\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
-              "text": "_default: "
+              "text": "local: "
             },
             {
               "kind": "Content",
@@ -210,11 +210,11 @@
         {
           "kind": "Variable",
           "canonicalReference": "jsonify-storage!session:var",
-          "docComment": "",
+          "docComment": "/**\n * Wrapper of `sessionStorage`.\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
-              "text": "_default: "
+              "text": "session: "
             },
             {
               "kind": "Content",

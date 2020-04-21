@@ -1,2 +1,6 @@
-declare const _default: import("./core").JSONStore;
-export default _default;
+/**
+ * @public
+ * Wrapper of `localStorage`.
+ */
+declare const local: import("./core").JSONStore;
+export default local;

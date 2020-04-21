@@ -1,2 +1,6 @@
-declare const _default: import("./core").JSONStore;
-export default _default;
+/**
+ * @public
+ * Wrapper of `sessionStorage`.
+ */
+declare const session: import("./core").JSONStore;
+export default session;
