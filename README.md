@@ -1,5 +1,10 @@
 # jsonify-storage
 
+[![Build Status](https://travis-ci.org/jinghua000/jsonify-storage.svg?branch=master)](https://travis-ci.org/jinghua000/jsonify-storage)
+[![npm module](https://badge.fury.io/js/jsonify-storage.svg)](https://www.npmjs.com/package/jsonify-storage)
+[![Coverage Status](https://coveralls.io/repos/github/jinghua000/jsonify-storage/badge.svg?branch=master)](https://coveralls.io/github/jinghua000/jsonify-storage?branch=master)
+[![Dependency Status](https://david-dm.org/jinghua000/jsonify-storage.svg)](https://david-dm.org/jinghua000/jsonify-storage)
+
 ## Introduction
 
 There is a unfriendly case when we use the the native `localStorage`, such as 
@@ -91,3 +96,5 @@ Others apis sames as native [`Storage`](https://developer.mozilla.org/en-US/docs
 > - clear -> clear
 > - key -> key
 > - length -> length
+
+See also [API documentation](https://github.com/jinghua000/jsonify-storage/blob/master/api-docs/jsonify-storage.jsonstore.md).
