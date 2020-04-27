@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "lib": ["esnext", "dom"],
+    "target": "esnext",
+    "downlevelIteration": true,
+    "declaration": true,
+    "declarationDir": "./types",
+  },
+  "include": ["src/**/*"],
+}

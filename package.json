@@ -1,0 +1,58 @@
+{
+  "name": "jsonify-storage",
+  "version": "0.1.0",
+  "description": "Jsonify the payload for local and session storage.",
+  "main": "dist/jsonify-storage.cjs.js",
+  "module": "dist/jsonify-storage.esm.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "test": "mocha --extension ts --require ts-node/register --reuqire test/setup.ts",
+    "clean": "rm -rf dist/ types/",
+    "build": "yarn build:src && yarn build:doc",
+    "build:src": "yarn clean && rollup -c",
+    "build:doc": "api-extractor run && api-documenter markdown --input-folder temp/ --output-folder api-docs/",
+    "cover": "yarn cover:unit && yarn cover:report",
+    "cover:unit": "nyc npm test",
+    "cover:report": "nyc report --reporter=lcov",
+    "coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinghua000/jsonify-storage.git"
+  },
+  "keywords": [
+    "storage",
+    "localStorage",
+    "sessionStorage",
+    "JSON",
+    "jsonify"
+  ],
+  "files": [
+    "dist",
+    "types"
+  ],
+  "author": "shadow",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jinghua000/jsonify-storage/issues"
+  },
+  "homepage": "https://github.com/jinghua000/jsonify-storage#readme",
+  "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@microsoft/api-documenter": "^7.7.18",
+    "@microsoft/api-extractor": "^7.7.13",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^13.11.0",
+    "assert": "^2.0.0",
+    "coveralls": "^3.1.0",
+    "dom-storage": "^2.1.0",
+    "mocha": "^7.1.1",
+    "nyc": "^15.0.1",
+    "rollup": "^2.4.0",
+    "rollup-plugin-terser": "^5.3.0",
+    "rollup-plugin-typescript2": "^0.27.0",
+    "ts-node": "^8.8.2",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {}
+}
