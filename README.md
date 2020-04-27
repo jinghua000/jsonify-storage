@@ -68,9 +68,6 @@ Then you can use it like this:
 local.set('foo', { a: 123 })
 local.get('foo') // => { a: 123 }
 local.get('foo').a === 123 // => true, will retain the type.
-local.remove('foo')
-local.get('foo') // => null
-localStorage.getItem('foo') // => null
 ```
 
 Payload will be json-stringified before save.
@@ -78,14 +75,15 @@ Payload will be json-stringified before save.
 Raw data seems like this:
 
 ```js
-localStorage.getItem('foo') // => "{"a":123}"
+localStorage.getItem('foo') // => '{"a":123}'
 ```
 
-If you get something can't parsed by JSON will return `null`
+If you try to get something can't parsed by JSON or not existed will return `null`
 
 ```js
 localStorage.setItem('bar', '我我我')
 local.get('bar') // => null
+local.get('baz') // => null
 ```
 
 Others apis sames as native [`Storage`](https://developer.mozilla.org/en-US/docs/Web/API/Storage), list below.
@@ -97,4 +95,4 @@ Others apis sames as native [`Storage`](https://developer.mozilla.org/en-US/docs
 > - key -> key
 > - length -> length
 
-See also [API documentation](https://github.com/jinghua000/jsonify-storage/blob/master/api-docs/jsonify-storage.jsonstore.md).
+More details see [API documentation](https://github.com/jinghua000/jsonify-storage/blob/master/api-docs/jsonify-storage.jsonstore.md).
